@@ -161,6 +161,8 @@ persist.dbg.ims_volte_enable=1
 persist.vendor.radio.data_ltd_sys_ind=1
 persist.vendor.radio.data_con_rprt=1
 
+ro.vendor.radio.imei.sv=1
+
 # Keystore
 ro.hardware.keystore_desede=true
 
