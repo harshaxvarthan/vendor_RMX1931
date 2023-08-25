@@ -14,24 +14,6 @@ allow system_app sysfs_oppo_display:file rw_file_perms;
 allow system_app vendor_sysfs_graphics:file read;
 set_prop(system_app, default_prop)
 
-# Incremental
-get_prop(system_app, incremental_prop)
-
-# allow apps like settings to check the file signature of an apk installed on
-# the Incremental File System, fill missing blocks and get the app status and loading progress
-allowxperm system_app apk_data_file:file ioctl {
-  INCFS_IOCTL_READ_SIGNATURE
-  INCFS_IOCTL_FILL_BLOCKS
-  INCFS_IOCTL_GET_BLOCK_COUNT
-  INCFS_IOCTL_GET_FILLED_BLOCKS
-};
-
 # To allow Settings to find and bind Google Battery HAL
 allow system_app hal_googlebattery_service:service_manager find;
 binder_call(system_app, hal_googlebattery)
-
-# Battery Health
-r_dir_file(system_app, sysfs_battery_supply)
-
-# Zram
-r_dir_file(system_app, sysfs_zram)
