@@ -34,11 +34,11 @@ genfscon proc /oppo_rf            u:object_r:proc_oppo_rf:s0
 # Wakeup stats
 genfscon sysfs /devices/virtual/diag/diag    u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/power_supply/ac/wakeup    u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/virtual/fastrpc/adsprpc-smd/wakeup    u:object_r:sysfs_wakeup:s0
-genfscon sysfs /devices/virtual/fastrpc/adsprpc-smd-secure/wakeup    u:object_r:sysfs_wakeup:s0
+
+#genfscon sysfs /devices/virtual/fastrpc/adsprpc-smd-secure/wakeup    u:object_r:sysfs_wakeup:s0
 
 # FW Update
-genfscon proc /fastchg_fw_update              u:object_r:proc_fw_update:s0
+#genfscon proc /fastchg_fw_update              u:object_r:proc_fw_update:s0
 genfscon proc /ui_soc_decimal              u:object_r:proc_decimal:s0
 
 # Boot
