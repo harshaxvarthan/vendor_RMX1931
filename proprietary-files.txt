@@ -684,6 +684,8 @@ vendor/lib64/libssd.so
 vendor/lib64/libStDrvInt.so
 vendor/lib64/libtzdrmgenprov.so
 
+vendor/lib64/libminksocket.so
+
 # DRM-HDCP
 vendor/lib64/libhdcp1prov.so
 vendor/lib64/libhdcp2p2prov.so
