@@ -1,0 +1,11 @@
+service fps_hal /odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service
+    # "class hal" causes a race condition on some devices due to files created
+    # in /data. As a workaround, postpone startup until later in boot once
+    # /data is mounted.
+    class late_start
+    user system
+    group system input uhid
+
+#Ziqing.Guo@EXP.BSP.Fingerprint.Basic, 2019/08/17, modify for sdsp init fail
+on property:sys.boot_completed=1
+    setprop vendor.oppo.biometrics.fingerprint.boot_completed 1
